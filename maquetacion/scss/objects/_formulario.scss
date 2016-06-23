@@ -1,0 +1,120 @@
+/*------------------------------------*\
+$FORMULARIO
+\*------------------------------------*/
+.group {
+    margin-bottom: 25px;
+}
+label {
+    @include font-size(16px, 24px);
+    color: $gray;
+    padding-left: 10px;
+    transition: all 300ms;
+    span {
+        color: $main;
+    }
+}
+input, textarea, select {
+    &:focus {
+        outline: none;
+    }
+}
+input {
+    width: 100%;
+    height: 36px;
+    @include font-size(16px, 16px);
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid $gray;
+}
+textarea {
+    width: 100%;
+    height: 100px;
+    resize: none;
+    @include font-size(16px, 16px);
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid $gray;
+}
+.focusin {
+    label {
+        color: $darkgray;
+    }
+    input, select, textarea {
+        padding: 9px 10px;
+        border: 2px solid $gray;
+    }
+}
+.error {
+    position: relative;
+    label {
+        color: $darkmain;
+    }
+    input {
+        padding: 9px 10px;
+        border: 2px solid $darkmain;
+    }
+    textarea {
+        border: 2px solid $darkmain;
+    }
+    p.error {
+        @include font-size(14px, 24px);
+        position: absolute;
+        bottom: -24px;
+        right: 0;
+        color: $darkmain;
+    }
+}
+.send-group {
+    position: relative;
+    p {
+        margin-bottom: 0;
+        position: absolute;
+        width: 80px;
+        left: 0;
+        top: 0;
+        padding-left: 10px;
+        color: $gray;
+        @include font-size(14px, 18px);
+        span {
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: $main;
+        }
+    }
+    input {
+        width: 180px;
+        background: $secundario;
+        color: white;
+        text-align: center;
+        margin-left: auto;
+        margin-right: 0;
+        display: block;
+        border: 0;
+        padding: 0;
+        .no-touch & {
+            transition: all 300ms;
+            &:hover {
+                background: $principal;
+            }
+        }
+    }
+}
+.message {
+    width: 100%;
+    background: $secundario;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    margin-bottom: 25px;
+    margin-top: 20px;
+    display: none;
+    &.msg-error {
+        background: $darkmain;
+    }
+    p {
+        padding: 20px;
+    }
+}

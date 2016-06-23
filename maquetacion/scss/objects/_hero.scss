@@ -1,0 +1,63 @@
+/*------------------------------------*\
+$HERO
+\*------------------------------------*/
+$width: 15px;
+$height: 15px;
+$bounce_height: 30px;
+.home .loader, .category .loader {
+    display: block;
+}
+.loader {
+    width: 100%;
+    height: 100%;
+    background: rgba($principal, .9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: $level11;
+    display: none;
+    .loading {
+        @include center;
+    }
+    .text {
+        color: #4397d1;
+        display: inline-block;
+        margin-left: 5px;
+    }
+
+    .bounceball {
+        position: relative;
+        display: inline-block;
+        height: 37px;
+        width: $width;
+        &:before {
+            position: absolute;
+            content: '';
+            display: block;
+            top: 0;
+            width: $width;
+            height: $height;
+            border-radius: 50%;
+            background-color: #4397d1;
+            transform-origin: 50%;
+            animation: bounce 500ms alternate infinite ease;
+        }
+    }
+
+    @keyframes bounce {
+        0% {
+            top: $bounce_height;
+            height: 5px;
+            border-radius: 60px 60px 20px 20px;
+            transform: scaleX(2);
+        }
+        35% {
+            height: $width;
+            border-radius: 50%;
+            transform: scaleX(1);
+        }
+        100% {
+            top: 0;
+        }
+    }
+}

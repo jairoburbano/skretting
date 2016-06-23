@@ -1,0 +1,57 @@
+/*------------------------------------*\
+$ANTERIORES
+\*------------------------------------*/
+.anteriores {
+    &.wrap {
+        @include respond-to(wide) {
+            max-width: cr(1200px);
+        }
+    }
+    .box--flex {
+        margin-top: 20px;
+    }
+    .banner--single {
+        margin-bottom: 15px;
+    }
+}
+.edicion__item {
+    width: 100%;
+    margin-bottom: 20px;
+    @include respond-to(tablet) {
+        padding: 0 15px;
+        width: 33.333%;
+    }
+    .no-touch & {
+        &:hover {
+            .edicion__title {
+                color: $main;
+            }
+        }
+    }
+    @include respond-to(desktop) {
+        width: 25%;
+    }
+    a {
+        display: block;
+    }
+}
+.edicion__media {
+    width: 100%;
+    margin-bottom: 10px;
+    img {
+        width: 100%;
+        display: block;
+    }
+}
+.edicion__date {
+    @include font-size(14px, 20px);
+    @extend .book;
+    color: $gray;
+    margin-bottom: 6px;
+}
+.edicion__title {
+    margin: 0;
+    @include font-size(18px, 22px);
+    color: $secundario;
+    transition: all 300ms;
+}

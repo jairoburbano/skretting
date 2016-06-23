@@ -1,0 +1,103 @@
+/*------------------------------------*\
+$STYLE
+\*------------------------------------*/
+.block--full {
+    border-bottom: 2px solid $lightergray;
+    padding: 40px 0;
+}
+.style-title {
+    width: 100%;
+    margin-bottom: 20px;
+    color: $lightergray;
+    font-weight: bold;
+    &.center {
+        margin: 40px auto 0;
+        text-align: center;
+    }
+}
+.colors {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.color__item {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.color__box {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 5px;
+}
+.color--main {
+    background: $main;
+}
+.color--darkmain {
+    background: $darkmain;
+}
+.color--principal {
+    background: $principal;
+}
+.color--darkgray {
+    background: $darkgray;
+}
+.color--gray {
+    background: $gray;
+}
+.color--lightgray {
+    background: $lightgray;
+}
+.color--secundario {
+    background: $secundario;
+}
+.color--disable {
+    background: $disable;
+}
+.tipografias {
+
+}
+.tipos__item {
+    margin-bottom: 20px;
+    .font {
+        @include font-size(24px, 28px);
+        color: $principal;
+    }
+    .font--book {
+        @extend .book;
+    }
+    .font--demi {
+        @extend .demi;
+    }
+    a {
+        @include font-size(14px, 18px);
+        color: $lightergray;
+        display: inline-block;
+    }
+}
+.title__item {
+    margin-bottom: 20px;
+}
+.item {
+    margin-bottom: 20px;
+    p {
+        margin-bottom: 0;
+    }
+}
+.icons {
+    justify-content: flex-start;
+    svg {
+        max-width: 24px;
+        max-height: 24px;
+        fill: $gray;
+        margin: 10px 0 10px 10px;
+        .no-touch & {
+            transition: all 300ms;
+            &:hover {
+                fill: $darkgray;
+            }
+        }
+    }
+}

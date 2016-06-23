@@ -1,0 +1,13 @@
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In  -->
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="24px" height="17.3px" viewBox="0 0 24 17.3" enable-background="new 0 0 24 17.3" xml:space="preserve">
+<defs>
+	<symbol  id="up" viewBox="-12 -8.7 24 17.3">
+		<g>
+			<polygon points="12,-6.3 9,-8.7 0,2.5 -9,-8.7 -12,-6.3 0,8.7 			"/>
+		</g>
+	</symbol>
+</defs>
+<use xlink:href="#up"  width="24" height="17.3" x="-12" y="-8.7" transform="matrix(1 0 0 -1 12 8.665)" overflow="visible"/>
+</svg>

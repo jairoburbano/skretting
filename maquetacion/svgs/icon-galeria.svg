@@ -1,0 +1,14 @@
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In  -->
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+<defs>
+	<symbol  id="galeria" viewBox="-8 -8 16 16">
+		<g>
+			<path d="M3,4V-7H-7V4H3 M4,5H-8V-8H4V5L4,5z M2,3h-8v-8h8V3z M5,4.4v-4l0.7,3.9L5,4.4z M-3.8,8l-0.4-2h1L-3,6.8
+				L1.8,6H5V5.4l1.8-0.3L5-5.3v-1.4l0.7-0.1L8,5.9L-3.8,8z"/>
+		</g>
+	</symbol>
+</defs>
+<use xlink:href="#galeria"  width="16" height="16" x="-8" y="-8" transform="matrix(1 0 0 -1 8 8)" overflow="visible"/>
+</svg>

@@ -1,0 +1,206 @@
+/*------------------------------------*\
+$SINGLE
+\*------------------------------------*/
+.single--page {
+    margin: 0 auto 20px;
+    @include respond-to(tablet) {
+        padding: 0;
+        max-width: 590px;
+    }
+    .grid__item__meta {
+        margin-bottom: 20px;
+        @include respond-to(tablet) {
+            justify-content: center;
+        }
+    }
+    h1 {
+        @include respond-to(tablet) {
+            font-family: 'Chivo', sans-serif;
+        }
+        @include respond-to(desktop) {
+            width: 790px;
+            position: relative;
+            left: 0;
+            margin-left: -100px;
+        }
+    }
+    img {
+        margin-bottom: 20px;
+    }
+}
+.profile {
+    padding: 0 20px;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    @include respond-to(tablet) {
+        text-align: left;
+    }
+    .no-touch & {
+        &:hover {
+            .profile__title {
+                color: $main;
+            }
+        }
+    }
+    &::before {
+        content: ' ';
+        width: 100%;
+        height: 1px;
+        display: block;
+        background: $lightgray;
+        margin-bottom: 30px;
+    }
+    &.cat--profile {
+        .profile__title {
+            @include font-size(24px, 30px);
+        }
+        .profile__text {
+            @include font-size(18px, 24px);
+            color: $gray;
+        }
+        .profile__desc {
+            margin-top: 20px;
+            @include font-size(16px, 24px);
+            @extend .book;
+        }
+        &::before {
+            opacity: 0;
+            margin-bottom: 20px;
+            @include respond-to(tablet) {
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
+.profile__container {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    @include respond-to(tablet) {
+        padding: 0 100px;
+        align-items: center;
+    }
+}
+.profile__media {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    overflow: hidden;
+    @include respond-to(tablet) {
+        width: 180px;
+        height: 180px;
+    }
+}
+.profile__content {
+    text-align: center;
+    @include font-size(16px, 24px);
+    color: $darkgray;
+    @include respond-to(tablet) {
+        width: calc(100% - 180px);
+        padding-left: 20px;
+        text-align: left;
+    }
+}
+.profile__title {
+    @include font-size(18px, 24px);
+    color: $secundario;
+    display: block;
+    transition: all 300ms;
+}
+.profile__bajada {
+    @include font-size(14px, 20px);
+    color: $gray;
+    margin-bottom: 5px;
+    display: block;
+}
+.related {
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    max-width: cr(1200px);
+    margin: auto;
+    h2 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+.share {
+    width: 100%;
+    height: 32px;
+    position: relative;
+    z-index: $level2;
+    @include respond-to(tablet) {
+        width: 68px;
+        height: auto;
+        position: fixed;
+        right: 0;
+        top: 30%;
+        z-index: $level9;
+    }
+}
+.share__group {
+    @extend .flex_center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    @include respond-to(tablet) {
+        position: relative;
+        top: 0;
+        bottom: auto;
+        flex-flow: column wrap;
+        align-items: flex-end;
+    }
+    a {
+        &:first-child {
+            @include respond-to(desktop) {
+                border-top-left-radius: 4px;
+            }
+        }
+        &:last-child {
+            @include respond-to(desktop) {
+                border-bottom-left-radius: 4px;
+            }
+        }
+    }
+}
+.stop-group {
+    position: absolute;
+}
+.share__item {
+    width: 20%;
+    height: 32px;
+    @extend .flex_center;
+    margin: 0;
+    @include respond-to(tablet) {
+        width: 48px;
+        height: 48px;
+    }
+    @include respond-to(desktop) {
+        position: relative;
+        transition: all 300ms;
+        right: 0;
+    }
+    .no-touch & {
+        &:hover {
+            width: 68px;
+            padding-right: 20px;
+        }
+    }
+    @each $redes, $color in $redes {
+        &.#{$redes} {
+            background: $color;
+        }
+    }
+    svg {
+        max-width: 16px;
+        max-height: 16px;
+        fill: white;
+        @include respond-to(tablet) {
+            max-width: 24px;
+            max-height: 24px;
+        }
+    }
+}

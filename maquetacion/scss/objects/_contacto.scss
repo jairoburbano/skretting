@@ -1,0 +1,90 @@
+/*------------------------------------*\
+$CONTACT
+\*------------------------------------*/
+.contacto {
+    max-width: cr(840px);
+    .box--flex {
+        margin-top: 20px;
+    }
+}
+.contacto-form {
+    margin-bottom: 20px;
+}
+.directions {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    max-width: cr(1000px);
+    margin: auto;
+}
+.directions__item {
+    width: 100%;
+    margin-bottom: 25px;
+    @include respond-to(tablet) {
+        width: 33.3333%;
+        margin-bottom: 0;
+        max-width: 250px;
+    }
+    p {
+        @extend .book;
+        margin-bottom: 0;
+    }
+}
+.direction__title {
+    @include font-size(16px, 24px);
+    text-transform: uppercase;
+    @extend .demi;
+}
+.direction__phone {
+    color: $darkgray;
+    @extend .book;
+    display: inline-table;
+    @include respond-to(desktop) {
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: $main;
+            opacity: 0;
+            transition: all 300ms;
+        }
+    }
+    .no-touch & {
+        &:hover {
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+    span {
+        width: 10px;
+        height: 16px;
+        display: inline-table;
+    }
+    svg {
+        width: 10px;
+        height: 16px;
+        fill: $darkgray;
+        margin-right: 5px;
+    }
+}
+#map {
+    width: 100%;
+    height: 480px;
+    margin-bottom: 15px;
+    display: none;
+    @include respond-to(tablet) {
+        display: block;
+    }
+}
+.formulario-contacto {
+    margin-top: 20px;
+    @include respond-to(tablet) {
+        margin-top: 0;
+    }
+}

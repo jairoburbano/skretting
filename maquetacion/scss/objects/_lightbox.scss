@@ -1,0 +1,61 @@
+/*------------------------------------*\
+$LIGHTBOX
+\*------------------------------------*/
+.informa {
+    display: none;
+    width: 100%;
+    max-width: 510px;
+    position: fixed;
+    top: 40px;
+    right: 350px;
+    z-index: $level10;
+    background: white;
+    height: 100vh;
+    overflow-y: auto;
+    @include respond-to(tablet) {
+        height: auto;
+        overflow: hidden;
+        position: absolute;
+        margin-left: -240px;
+    }
+}
+.informa__flex {
+    display: flex;
+    flex-flow:  row wrap;
+    justify-content: center;
+}
+.informa__media {
+    width: 100%;
+    padding: 20px;
+    background: $lightgray;
+    @include respond-to(tablet) {
+        width: 220px;
+    }
+    img {
+        max-width: 180px;
+        margin: auto;
+        display: block;
+    }
+}
+.informa__content {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid $lightgray;
+    a {
+        color: $secundario;
+    }
+    @include respond-to(tablet) {
+        width: 290px;
+        border: 0;
+        border-top: 1px solid $lightgray;
+        border-right: 1px solid $lightgray;
+    }
+}
+.informa__more {
+    background: $principal;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

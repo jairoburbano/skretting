@@ -1,0 +1,133 @@
+/*------------------------------------*\
+$BANNER
+\*------------------------------------*/
+.banner {
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    position: relative;
+    margin-bottom: 20px;
+    display: block;
+    @include respond-to(tablet) {
+        margin-bottom: 30px;
+        height: 600px;
+    }
+    &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: .6;
+        background: $principal;
+        z-index: $level1;
+    }
+}
+.banner--single {
+    margin-bottom: 5px;
+    @include respond-to(tablet) {
+        margin-bottom: 30px;
+    }
+}
+.banner__content {
+    width: 100%;
+    @include center;
+    color: white;
+    text-align: center;
+    z-index: $level2;
+    padding: 0 30px;
+    max-width: cr(1200px);
+    @include respond-to(desktop) {
+        padding: 0;
+    }
+}
+.banner__meta {
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    margin-bottom: 10px;
+    @include respond-to(tablet) {
+        flex-flow: row wrap;
+    }
+    span {
+        display: none;
+        @include respond-to(tablet){
+            display: inline-table;
+            margin: 0 5px;
+        }
+    }
+    p, a {
+        display: inline-table;
+        @include font-size(14px, 20px);
+        color: white;
+        margin: auto;
+        border-bottom: 1px solid white;
+        @include respond-to(tablet) {
+            border-bottom: 0;
+            padding: 0;
+            margin: 0;
+        }
+        &:last-child {
+            border-bottom: 0;
+            @include respond-to(tablet) {
+                border-right: 0;
+            }
+        }
+        .span {
+            display: inline-flex;
+        }
+        svg {
+            max-height: 16px;
+            max-width: 16px;
+            fill: white;
+            display: inline-block;
+            transition: all 300ms;
+        }
+    }
+    a {
+        .no-touch & {
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background: white;
+                opacity: 0;
+                transition: all 300ms;
+            }
+            &:hover {
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+.banner__title {
+    @include font-size(21px, 23px);
+    color: white;
+    @extend .chivobold;
+    display: block;
+    @include respond-to(tablet) {
+        @include font-size(32px, 40px);
+    }
+    @include respond-to(desktop) {
+        @include font-size(64px, 80px);
+    }
+}
+.banner__text {
+    @include font-size(21px, 23px); 
+    @extend .chivolight;
+    color: white;
+    font-weight: normal;
+    @include respond-to(tablet) {
+        @include font-size(36px, 40px);
+    }
+    @include respond-to(desktop) {
+        @include font-size(72px, 80px);
+    }
+}

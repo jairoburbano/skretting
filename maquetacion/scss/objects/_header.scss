@@ -1,0 +1,399 @@
+/*------------------------------------*\
+$HEADER
+\*------------------------------------*/
+.header {
+    width: 100%;
+    @include respond-to(desktop) {
+        overflow: hidden;
+    }
+}
+.header--top {
+    background: $main;
+    height: 60px;
+    overflow: hidden;
+    position: relative;
+    z-index: $level4;
+    @include respond-to(desktop) {
+        background: white;
+        z-index: $level1;
+    }
+    .wrap {
+        height: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 300ms;
+        @include respond-to(tablet) {
+            padding: 0 20px;
+        }
+    }
+}
+.flex-final {
+    .wrap {
+        justify-content: flex-end;
+    }
+}
+.search-active {
+    .header__search {
+        width: 100%;
+        .input-group {
+            display: block;
+            width: 100%;
+            padding-left: 36px;
+            input {
+                background: white;
+            }
+        }
+        .send-group {
+            display: block;
+            z-index: $level2;
+        }
+    }
+    .header__search__close {
+        opacity: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .header__search__icon {
+        z-index: $level1;
+        background-color: transparent;
+        svg {
+            fill: $main;
+        }
+    }
+}
+.header__menu__icon {
+    @include respond-to(tablet) {
+        width: 105px;
+        display: flex;
+    }
+    @include respond-to(desktop) {
+        display: none;
+    }
+    &.open-menu {
+        svg {
+            display: none;
+            &:last-of-type {
+                display: block;
+            }
+        }
+    }
+    p {
+        display: none;
+        @include respond-to(tablet) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            background: white;
+            border-bottom-right-radius: 4px;
+            border-top-right-radius: 4px;
+        }
+    }
+    svg {
+        fill: white;
+        width: 10px;
+        height: 10px;
+        &:last-of-type {
+            display: none;
+        }
+    }
+}
+.menu-icon {
+    background: $darkmain;
+    width: 36px;
+    height: 36px;
+    @extend .flex_center;
+    border-radius: 4px;
+    @include respond-to(tablet) {
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+    }
+}
+.header__logo {
+    height: 36px;
+    @include respond-to(desktop) {
+        height: 60px;
+        position: relative;
+        z-index: $level6;
+    }
+    a {
+        height: 100%;
+        display: block;
+    }
+    svg {
+        fill: white;
+        height: 100%;
+        @include respond-to(desktop) {
+            fill: $gray;
+            .icon--change {
+                fill: $darkgray;
+            }
+        }
+    }
+}
+.header__search {
+    width: 36px;
+    height: 36px;
+    @extend .flex_center;
+    position: relative;
+    @include respond-to(desktop) {
+        width: 230px;
+        z-index: $level5;
+    }
+    .input-group {
+        display: block;
+        width: 0;
+        height: 36px;
+        transition: all 300ms;
+        @include respond-to(desktop) {
+            width: 100%;
+        }
+        input {
+            width: 100%;
+            position: relative;
+            left: 0;
+            top: 0;
+            transition: all 300ms;
+            border: 0;
+            border-radius: 4px;
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+            padding: 0 10px;
+            padding-right: 36px;
+            @include font-size(16px, 36px);
+            display: flex;
+            @include respond-to(desktop) {
+                background: white;
+                border-bottom-left-radius: 4px;
+                border-top-left-radius: 4px;
+                border: 1px solid $lightgray;
+            }
+        }
+    }
+    .send-group {
+        display: none;
+        width: 36px;
+        height: 36px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: all 300ms;
+        @include respond-to(desktop) {
+            z-index: $level2;
+            display: block;
+        }
+        input {
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            border: 0;
+            transition: all 300ms;
+            @include respond-to(desktop) {
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}
+.header__search__close {
+    @extend .flex_center;
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    background: $darkmain;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    transition: all 300ms;
+    svg {
+        width: 10px;
+        height: 10px;
+        fill: white;
+    }
+}
+.header__search__icon {
+    width: 36px;
+    height: 36px;
+    @extend .flex_center;
+    background: $darkmain;
+    border-radius: 4px;
+    z-index: $level2;
+    transition: all 300ms;
+    position: absolute;
+    right: 0;
+    top: 0;
+    @include respond-to(desktop) {
+        z-index: $level1;
+        background-color: transparent;
+        &.hover {
+            svg {
+                fill: $principal
+            }
+        }
+    }
+    svg {
+        width: 19px;
+        height: 19px;
+        fill: white;
+        transition: all 300ms;
+        @include respond-to(desktop) {
+            fill: $main;
+            transition: all 300ms;
+        }
+    }
+}
+.header--bottom {
+    background: $darkmain;
+    height: calc(100vh - 60px);
+    display: none;
+    width: 100%;
+    position: absolute;
+    z-index: $level3;
+    overflow: auto;
+    @include respond-to(desktop) {
+        display: block;
+        height: 48px;
+        background: $main;
+        position: static;
+        overflow: hidden;
+        &:before {
+            display: none;
+        }
+    }
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        z-index: 1;
+        background: $darkgray;
+    }
+    &.active {
+        &::before {
+            opacity: .9;
+        }
+        .nav__container {
+            left: 0;
+        }
+    }
+}
+.nav__container {
+    width: 210px;
+    background: $darkmain;
+    position: relative;
+    z-index: $level2;
+    min-height: 100%;
+    transition: all 300ms;
+    @include less-than(desktop) {
+        left: -210px;
+    }
+    @include respond-to(desktop) {
+        width: 100%;
+        background: $main;
+        position: static;
+    }
+}
+.nav {
+    background: $main;
+    @include respond-to(desktop) {
+        height: 48px;
+        display: flex;
+        flex-flow: row wrap;
+        margin: auto;
+        width: 100%;
+        padding: 0 20px;
+    }
+    .menu-item {
+        height: 40px;
+        padding-left: 20px;
+        transition: all 300ms;
+        @include less-than(desktop) {
+            .no-touch & {
+                &:hover {
+                    border-left: 10px solid white;
+                }
+            }
+        }
+        @include respond-to(desktop) {
+            height: 48px;
+            padding: 0 10px;
+            text-align: center;
+            &:hover {
+                background: $darkmain;
+            }
+        }
+        &.current-menu-item {
+            border-left: 10px solid white;
+            @include respond-to(desktop) {
+                border-left: 0;
+                background: $darkmain;
+            }
+        }
+        a {
+            @include font-size(16px, 40px);
+            @extend .book;
+            color: white;
+            display: block;
+            @include respond-to(tablet) {
+                @include font-size(16px, 48px);
+            }
+        }
+    }
+}
+.nav--top {
+    @include respond-to(desktop) {
+        position: absolute;
+        right: 280px;
+        top: 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+        z-index: $level9;
+    }
+    a {
+        @include font-size(14px, 40px);
+        @extend .book;
+        color: white;
+        padding-left: 20px;
+        display: block;
+        @include respond-to(desktop) {
+            @include font-size(14px, 60px);
+            color: $darkgray;
+            position: relative;
+            padding: 0;
+            margin: 0 10px;
+            &.current-menu-item {
+                &::after {
+                    opacity: 1;
+                }
+            }
+            &::after {
+                opacity: 0;
+                content: '';
+                position: absolute;
+                bottom: 19px;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background: $main;
+                transition: all 300ms;
+            }
+        }
+        .no-touch & {
+            &:hover {
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

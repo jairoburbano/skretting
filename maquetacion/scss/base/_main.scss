@@ -1,0 +1,234 @@
+/*------------------------------------*\
+$MAIN
+\*------------------------------------*/
+html, body {
+    height: 100%;
+    color: $darkgray;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Chivo', sans-serif;
+}
+.noscroll {
+    overflow: hidden;
+}
+@include sticky(60px, page-wrap, footer);
+@include respond-to(tablet) {
+    @include sticky(90px, page-wrap, footer);
+}
+.flex_center {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    color: $secundario;
+}
+.title {
+    width: 100%;
+    @include respond-to(tablet) {
+        text-align: center;
+    }
+}
+.title--main {
+    margin-top: 25px;
+    @include respond-to(tablet) {
+        margin-top: 50px;
+    }
+}
+h1 {
+    @include font-size(24px, 30px);
+    &.special {
+        margin-top: 40px;
+    }
+}
+h2 {
+    @include font-size(21px, 26px);
+}
+h3 {
+    @include font-size(18px, 24px);
+    text-transform: uppercase;
+}
+h4 {
+    @include font-size(18px, 24px);
+}
+h5 {
+    @include font-size(18px, 24px);
+    @extend .demi;
+}
+h6 {
+    @include font-size(16px, 24px);
+    @extend .demi;
+}
+p {
+    @include font-size(16px, 24px);
+    margin-bottom: 20px;
+    @extend .book;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &.small {
+        margin-bottom: 0;
+        @include font-size(14px, 18px);
+        color: $lightergray;
+    }
+    &.bajada {
+        @include font-size(18px, 24px);
+        color: $gray;
+    }
+    .light {
+        @include font-size(16px, 26px);
+        @extend .chivolight;
+    }
+}
+.destacado {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    padding: 20px;
+    background: $secundario;
+    color: white;
+    margin-bottom: 20px;
+    @include respond-to(tablet) {
+        width: 380px;
+        float: right;
+        margin-left: 25px;
+        margin-bottom: 20px;
+        margin-right: -20px;
+    }
+    @include respond-to(desktop) {
+        margin-right: -100px;
+    }
+    a {
+        color: white !important;
+        text-decoration: underline;
+        transition: all 300ms;
+        &:hover {
+            opacity: .5;
+        }
+        &::after {
+            display: none !important;
+        }
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: white;
+    }
+    p {
+        margin-bottom: 0;
+    }
+}
+img {
+    max-width: 100%;
+}
+.content {
+    .blockquote {
+        width: calc(100% + 40px);
+        margin-left: -20px;
+        padding: 20px;
+        background: $lightgray;
+        margin-bottom: 20px;
+        @include respond-to(tablet) {
+            width: 380px;
+            float: left;
+            margin-right: 25px;
+            margin-bottom: 20px;
+            margin-left: -20px;
+        }
+        @include respond-to(desktop) {
+            margin-left: -100px;
+        }
+        h2 {
+            @include font-size(18px, 26px);
+            @extend .demi;
+            margin-bottom: 0;
+        }
+        ol, ul {
+            p {
+                margin-bottom: 0;
+            }
+        }
+        ol {
+            li {
+                &::before {
+                    top: 3px;
+                    @extend .demi;
+                }
+            }
+        }
+    }
+    h1 {
+        @include font-size(21px, 24px);
+        @extend .chivolight;
+        margin-bottom: 20px;
+    }
+    h2 {
+        @include font-size(21px, 24px);
+        @extend .chivolight;
+        margin-bottom: 20px;
+    }
+    a {
+        @include font-size(16px, 20px);
+        color: $darkgray;
+        position: relative;
+        .no-touch & {
+            transition: all 300ms;
+            &:hover {
+                color: $main;
+            }
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: $main;
+        }
+    }
+    ul {
+        @include font-size(16px, 24px);
+        > li {
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 8px;
+                width: 5px;
+                height: 5px;
+                background: $secundario;
+                border-radius: 50%;
+            }
+        }
+    }
+    li {
+        margin-bottom: 15px;
+        position: relative;
+        padding-left: 20px;
+    }
+    ol {
+        counter-reset: item;
+        > li {
+            &::before {
+                content: counters(item, ".") ". "; 
+                counter-increment: item;
+                position: absolute;
+                left: 0;
+                top: 0;
+                color: $secundario;
+            }
+            li {
+                padding-left: 30px;
+            }
+        }
+    }
+}
+strong, b {
+    @extend .demi;
+}
+.wp-caption {
+    width: 100% !important;
+    img {
+        width: 100%;
+    }
+}

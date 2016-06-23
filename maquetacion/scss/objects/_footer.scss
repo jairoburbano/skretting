@@ -1,0 +1,98 @@
+/*------------------------------------*\
+$FOOTER
+\*------------------------------------*/
+.footer {
+    background: $principal;
+    height: 60px;
+    @include respond-to(tablet) {
+        margin-top: 30px;
+    }
+    .wrap {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include respond-to(tablet) {
+            padding: 0 20px;
+        }
+    }
+}
+.content__foo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .reactor {
+        margin-right: 10px;
+    }
+}
+.redes-foo {
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 32px;
+//    width: 64px;
+}
+.redes__item {
+    width: 32px;
+    height: 32px;
+//    background: white;
+    background: $lightgray;
+    @extend .flex_center;
+    .no-touch & {
+        transition: all 300ms;
+        &:hover {
+            background: #0077b5;
+            svg {
+                fill: white
+            }
+        }
+    }
+//    .no-touch & {
+//        transition: all 300ms;
+//        &:hover {
+//            background: #395a99;
+//            svg {
+//                fill: white
+//            }
+//        }
+//    }
+//    &:last-of-type {
+//        background: $lightgray;
+//        .no-touch & {
+//            &:hover {
+//                background: #0077b5;
+//                svg {
+//                    fill: white;
+//                }
+//            }
+//        }
+//        svg {
+//            fill: #0077b5;
+//        }
+//    }
+//    svg {
+//        transition: all 300ms;
+//        max-width: 16px;
+//        max-height: 16px;
+//        fill: #3a5999;
+//    }
+    svg {
+        transition: all 300ms;
+        max-width: 16px;
+        max-height: 16px;
+        fill: #0077b5;
+    }
+}
+.links-foo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    a {
+        display: block;
+        margin-left: 10px;
+    }
+}

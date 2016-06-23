@@ -1,0 +1,89 @@
+/*------------------------------------*\
+    		$SETTINGS
+\*------------------------------------*/
+
+/* ============== // Transition // ============== */
+
+$transition-time: .3s;
+$transition-method: ease-in-out;
+
+
+/* ============== // FONTS // ============== */
+@font-face {
+    font-family: 'franklin_gothic_fsbook';
+    src: url('../fonts/franklingothic-book-webfont.eot');
+    src: url('../fonts/franklingothic-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/franklingothic-book-webfont.woff2') format('woff2'),
+         url('../fonts/franklingothic-book-webfont.woff') format('woff'),
+         url('../fonts/franklingothic-book-webfont.ttf') format('truetype'),
+         url('../fonts/franklingothic-book-webfont.svg#franklin_gothic_fsbook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'franklin_gothic_fsdemi';
+    src: url('../fonts/franklingothic-demi-webfont.eot');
+    src: url('../fonts/franklingothic-demi-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/franklingothic-demi-webfont.woff2') format('woff2'),
+         url('../fonts/franklingothic-demi-webfont.woff') format('woff'),
+         url('../fonts/franklingothic-demi-webfont.ttf') format('truetype'),
+         url('../fonts/franklingothic-demi-webfont.svg#franklin_gothic_fsdemi') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'chivobold';
+    src: url('../fonts/chivo-bold-webfont.eot');
+    src: url('../fonts/chivo-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/chivo-bold-webfont.woff2') format('woff2'),
+         url('../fonts/chivo-bold-webfont.woff') format('woff'),
+         url('../fonts/chivo-bold-webfont.ttf') format('truetype'),
+         url('../fonts/chivo-bold-webfont.svg#chivobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'chivolight';
+    src: url('../fonts/chivo-light-webfont.eot');
+    src: url('../fonts/chivo-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/chivo-light-webfont.woff2') format('woff2'),
+         url('../fonts/chivo-light-webfont.woff') format('woff'),
+         url('../fonts/chivo-light-webfont.ttf') format('truetype'),
+         url('../fonts/chivo-light-webfont.svg#chivolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.book {
+    font-family: 'franklin_gothic_fsbook';
+    font-weight: normal;
+}
+.demi {
+    font-family: 'franklin_gothic_fsdemi';
+    font-weight: normal;
+}
+.chivolight {
+    font-family: 'chivolight';
+    font-weight: normal;
+}
+.chivobold {
+    font-family: 'chivobold';
+    font-weight: normal;
+}
+
+/* ============== // COLORS // ============== */
+$principal : #2a2a2a;
+$darkgray : #404040;
+$gray: #979496;
+$lightgray: #e6e6e6;
+$lightergray: #b3b3b3;
+$disable: #f6f6f6;
+$main: #dc2f34;
+$darkmain: #8f1014;
+$secundario: #00497b;
+$redes: (
+    share--facebook : #3a5999,
+    share--twitter : #29a9e3,
+    share--linkedin : #0077b5,
+    share--gplus : #df4139,
+    share--letter : #ff6a08
+);
